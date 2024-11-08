@@ -30,6 +30,7 @@ class Transmuxer {
     constructor(mediaDataSource, config) {
         this.TAG = 'Transmuxer';
         this._emitter = new EventEmitter();
+        this._emitter.setMaxListeners(64)
 
         if (config.enableWorker && typeof (Worker) !== 'undefined') {
             try {

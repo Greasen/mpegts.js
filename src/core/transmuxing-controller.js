@@ -34,6 +34,7 @@ class TransmuxingController {
     constructor(mediaDataSource, config) {
         this.TAG = 'TransmuxingController';
         this._emitter = new EventEmitter();
+        this._emitter.setMaxListeners(64)
 
         this._config = config;
 

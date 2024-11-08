@@ -161,5 +161,6 @@ class LoggingControl {
 }
 
 LoggingControl.emitter = new EventEmitter();
+LoggingControl.emitter.setMaxListeners(64)
 
 export default LoggingControl;
